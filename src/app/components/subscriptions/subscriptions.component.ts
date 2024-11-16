@@ -1,11 +1,11 @@
 import { Component, HostListener } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-subscriptions',
+  templateUrl: './subscriptions.component.html',
+  styleUrl: './subscriptions.component.css'
 })
-export class HomeComponent {
+export class SubscriptionsComponent {
   lastScrollTop: number = 0;
   isNavbarVisible: boolean = true;
 

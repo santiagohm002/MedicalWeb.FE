@@ -1,10 +1,11 @@
-<app-navbar></app-navbar>
+<app-navbar [ngClass]="{'hidden-navbar': !isNavbarVisible}"></app-navbar>
+
 <section id="hero" class="position-relative overflow-hidden bg-dark text-white py-5">
   <!-- The video -->
-<video autoplay muted loop id="myVideo" preload="auto">
-  <source src="https://videos.pexels.com/video-files/6192969/6192969-hd_1920_1080_30fps.mp4" type="video/mp4">
-</video>
-  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.45);"></div>
+  <video autoplay muted loop id="myVideo" preload="auto">
+    <source src="https://videos.pexels.com/video-files/6192969/6192969-hd_1920_1080_30fps.mp4" type="video/mp4">
+  </video>
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
   
   <!-- Contenido de la sección -->
   <div class="container d-flex flex-column align-items-center justify-content-center" style="min-height: 80vh;">
@@ -15,21 +16,69 @@
     </a>
   </div>
 </section>
-<section id="hero-services" class="position-relative py-5" style="background-color: #C6B5A0 ;">
+
+<section id="subscriptions" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Nuestras Suscripciones</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://www.svgrepo.com/show/226965/medicine-pharmacy.svg" alt="Suscripción 1">
+        <div class="subtitle">Beneficio destacado</div>
+        <div class="title">Suscripción #1</div>
+        <p class="description">Accede a consultas médicas ilimitadas y más beneficios exclusivos.</p>
+        <a href="#" class="button">Ver más</a>
+        <div class="small-text" style="color: #957754;">Suscripción Básica</div>
+      </div>
+      <div class="card">
+        <img src="https://www.svgrepo.com/show/226934/medicine-pharmacy.svg" alt="Suscripción 2">
+        <div class="subtitle">Beneficio destacado</div>
+        <div class="title">Suscripción #2</div>
+        <p class="description">Disfruta de acceso a especialistas y servicios premium.</p>
+        <a href="#" class="button">Ver más</a>
+        <div class="small-text" style="color: #957754;">Suscripción Premium</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="hero-services" class="position-relative py-5" style="background-color: #C6B5A0;">
   <div class="container services-section">
     <h2 class="text-center">Servicios de Salud</h2>
     <div class="row">
       <div class="col-md-6 service">
         <i class="fas fa-stethoscope"></i>
-        <h3>Suscripciones Médicas</h3>
+        <h3 style="color: #957754;">Suscripciones Médicas</h3>
         <p>Obtén acceso a información médica y servicios de salud digital a través de nuestras suscripciones personalizadas.</p>
       </div>
       <div class="col-md-6 service">
         <i class="fas fa-user-md"></i>
-        <h3>Teleconsultas Disponibles</h3>
+        <h3 style="color: #957754;">Teleconsultas Disponibles</h3>
         <p>Accede a consultas médicas en línea con profesionales de la salud desde cualquier lugar y en cualquier momento.</p>
       </div>
     </div>
   </div>
 </section>
+
+<section class="py-5" id="about-digital-health">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Texto explicativo -->
+      <div class="col-md-6">
+        <h3>Tu salud, nuestra prioridad digital</h3>
+        <p class="text-muted">
+          Cemedical es tu plataforma de salud digital, ofreciendo suscripciones de medicina, teleconsultas y acceso a información médica desde la comodidad de tu hogar.
+        </p>
+      </div>
+      <!-- Imagen ilustrativa -->
+      <div class="col-md-6 text-center">
+        <img 
+          src="https://images.unsplash.com/photo-1641757625075-d018760a4fb5?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHwxMnx8ZGlnaXRhbCUyMGhlYWx0aHxlbnwwfHx8fDE3MjQ1MzQ2NDB8MA&ixlib=rb-4.0.3&auto=format&fit=crop&w=606&h=544" 
+          alt="Salud digital" 
+          class="img-fluid rounded shadow"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
 <app-footer></app-footer>

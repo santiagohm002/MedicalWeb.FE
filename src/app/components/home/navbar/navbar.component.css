@@ -55,3 +55,29 @@
     background-color: #957754;
     color: #fff;
   }
+
+  .collapse {
+    display: none;
+  }
+  
+  .collapse.show {
+    display: flex;
+  }
+  
+  @media (max-width: 992px) {
+    .collapse {
+      flex-direction: column;
+      background-color: #f8f9fa;
+      padding: 1rem;
+    }
+  
+    .navbar-nav {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .nav-link {
+      text-align: center;
+    }
+  }
+  
